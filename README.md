@@ -3,7 +3,6 @@
 This is a quick write up to show 2 ways to use OVH Public Cloud Object storage to backup data on Windows. The first method is suitable for any Windows installation using an Open Source bit of software called Duplicati. The second uses duplicity via the Linux Subsystem for Windows 10.
 
 
-
 ## Prerequisites
 
 Before starting either of the methods below you will need an OVH Public Cloud and the open stack configuration file from the Public Could Web Control Panel. To get your config file:
@@ -17,7 +16,6 @@ Before starting either of the methods below you will need an OVH Public Cloud an
 [Image of Steps](https://i.gyazo.com/92205ec88bf4c5b5345fb19f7147816a.png)
 
 Keep this file as you will need it later.
-
 
 
 ## Method 1 – Duplicati
@@ -37,7 +35,30 @@ This method uses an Open Source software call Duplicati, more information can be
 The back is now setup and will continue to backup so long as Duplicati is left running. To restore a backup, click &quot;Restore&quot; on the side menu and follow the wizard.
 
 
-
 ## Method 2 – Duplicity
 
-Coming Soon
+This method uses 2 batch files alongside 2 bash files for the Windows 10 Linux Subsystem. You will need new bash files for each new backup job you wish to create.
+
+1. Install Linux Subsystem for Windows 10 – more info [here](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide).
+2. Add duplicity repo, update and install it.
+```
+sudo add-apt-repository ppa:duplicity-team/ppa
+
+sudo apt-get update &amp;&amp; sudo apt-get install duplicity
+```
+3. Install Swift
+```
+sudo apt-get install python-pip
+
+sudo pip install python-swiftclient python-keystoneclient
+```
+4. Edit the bash (backup.sh &amp; restore.sh) files to your needs – you will need the info from the OpenStack config file where:
+  - SWIFT\_USERNAME   OS\_USERNAME
+  - SWIFT\_PASSWORD   Your OpenStack Password
+  - SWIFT\_AUTHURL    &quot;https://auth.cloud.ovh.net/v2.0/&quot;
+  - SWIFT\_AUTHVERSION    &quot;2&quot;
+  - SWIFT\_TENANTNAME    OS\_TENNANT\_NAME
+  - SWIFT\_REGIONNAME    OS\_REGION\_NAME
+
+5. When you need to backup, run the backup.bat file.
+6. When you need to restore, run the restore.bat file.
