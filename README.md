@@ -2,6 +2,8 @@
 
 This is a quick write up to show 2 ways to use OVH Public Cloud Object storage to backup data on Windows. The first method is suitable for any Windows installation using an Open Source bit of software called Duplicati. The second uses duplicity via the Linux Subsystem for Windows 10.
 
+
+
 ## Prerequisites
 
 Before starting either of the methods below you will need an OVH Public Cloud and the open stack configuration file from the Public Could Web Control Panel. To get your config file:
@@ -15,6 +17,8 @@ Before starting either of the methods below you will need an OVH Public Cloud an
 [Image of Steps](https://i.gyazo.com/92205ec88bf4c5b5345fb19f7147816a.png)
 
 Keep this file as you will need it later.
+
+
 
 ## Method 1 – Duplicati
 
@@ -31,6 +35,8 @@ This method uses an Open Source software call Duplicati, more information can be
 9. Fill out any remaining options you require and click &quot;Save&quot;.
 
 The back is now setup and will continue to backup so long as Duplicati is left running. To restore a backup, click &quot;Restore&quot; on the side menu and follow the wizard.
+
+
 
 ## Method 2 – Duplicity
 
