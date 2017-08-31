@@ -1,4 +1,4 @@
-#OVH Object Storage - Windows File Backup
+# OVH Object Storage - Windows File Backup
 
 This is a quick write up to show 2 ways to use OVH Public Cloud Object storage to backup data on Windows. The first method is suitable for any Windows installation using an Open Source bit of software called Duplicati. The second uses duplicity via the Linux Subsystem for Windows 10.
 
