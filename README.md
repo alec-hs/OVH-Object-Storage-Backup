@@ -53,12 +53,12 @@ sudo apt-get install python-pip
 sudo pip install python-swiftclient python-keystoneclient
 ```
 4. Edit the bash (backup.sh &amp; restore.sh) files to your needs – you will need the info from the OpenStack config file where:
-  - SWIFT\_USERNAME   OS\_USERNAME
-  - SWIFT\_PASSWORD   Your OpenStack Password
-  - SWIFT\_AUTHURL    &quot;https://auth.cloud.ovh.net/v2.0/&quot;
-  - SWIFT\_AUTHVERSION    &quot;2&quot;
-  - SWIFT\_TENANTNAME    OS\_TENNANT\_NAME
-  - SWIFT\_REGIONNAME    OS\_REGION\_NAME
+  - SWIFT\_USERNAME  -->  OS\_USERNAME
+  - SWIFT\_PASSWORD  -->  Your OpenStack Password
+  - SWIFT\_AUTHURL  -->  &quot;https://auth.cloud.ovh.net/v2.0/&quot;
+  - SWIFT\_AUTHVERSION  -->  &quot;2&quot;
+  - SWIFT\_TENANTNAME  -->  OS\_TENNANT\_NAME
+  - SWIFT\_REGIONNAME  -->  OS\_REGION\_NAME
 
 5. When you need to backup, run the backup.bat file.
 6. When you need to restore, run the restore.bat file.
