@@ -44,7 +44,7 @@ This method uses 2 batch files alongside 2 bash files for the Windows 10 Linux S
 ```
 sudo add-apt-repository ppa:duplicity-team/ppa
 
-sudo apt-get update &amp;&amp; sudo apt-get install duplicity
+sudo apt-get update && sudo apt-get install duplicity
 ```
 3. Install Swift
 ```
